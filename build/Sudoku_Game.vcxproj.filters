@@ -7,9 +7,15 @@
     <ClCompile Include="C:\Projects\Sudoku\src\cell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Projects\Sudoku\src\sudoku.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Projects\Sudoku\src\cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Projects\Sudoku\src\sudoku.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

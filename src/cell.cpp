@@ -11,7 +11,7 @@ Cell::Cell()
 	X = 0;
 	Y = 0;
 
-	rectangle = sf::RectangleShape(sf::Vector2f(Size-4, Size-4));
+	rectangle = std::make_shared<sf::RectangleShape> (sf::Vector2f(Size-4, Size-4));
 
 	std::string myfontFileName = "../Textures/Arial.ttf";
 	p_myFont = std::make_shared<sf::Font>();
@@ -47,14 +47,15 @@ void Cell::set(int num)
 }
 int Cell::get()
 {
+	if (Number < 0 || Number >9) return -1;
 	return Number;
 }
 void Cell::draw(sf::RenderWindow* Window)
 {
-	rectangle.setFillColor(sf::Color::White);
-	rectangle.setPosition(X + 2, Y + 2);
+	rectangle->setFillColor(sf::Color::White);
+	rectangle->setPosition(X + 2, Y + 2);
 
-	Window->draw(rectangle); // Drawing our shape.
+	Window->draw(*rectangle); // Drawing our shape.
 
 	if (Number < 0 || Number > 9) return;
 
@@ -66,7 +67,22 @@ void Cell::draw(sf::RenderWindow* Window)
 
 
 //-----------------------------------------------------------------------------------------
-CellContainer::CellContainer(int x, int y) 
+CellContainer::CellContainer()
+{
+
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			Cells[i][j].X =  i * Cell::Size;
+			Cells[i][j].Y =  j * Cell::Size;
+		}
+	}
+
+}
+
+void CellContainer::SetPostion(int x, int y) 
 {
 	X = x;
 	Y = y;

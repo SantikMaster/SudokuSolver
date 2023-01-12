@@ -1,4 +1,6 @@
 
+#include <memory>
+
 namespace sf
 {
 	class RenderWindow;
@@ -15,7 +17,7 @@ class Cell
 	std::shared_ptr<sf::Font> p_myFont;
 	std::shared_ptr<sf::Text> p_Text;
 
-	sf::RectangleShape rectangle;
+	std::shared_ptr <sf::RectangleShape> rectangle;
 
 public:
 	static const int Size = 55;
@@ -37,7 +39,8 @@ public:
 	Cell Cells[3][3];
 	int X, Y;
 
-	CellContainer(int x, int y);
+	CellContainer();
+	void SetPostion(int x, int y);
 
 	void draw(sf::RenderWindow* Window);
 

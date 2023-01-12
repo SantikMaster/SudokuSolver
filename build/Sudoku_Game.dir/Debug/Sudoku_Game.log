@@ -1,20 +1,5 @@
 ﻿cl : command line warning D9002: ignoring unknown option '-std=c++14'
-  cell.cpp
-C:\Projects\Sudoku\src\cell.cpp(28,6): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(36,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(37,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(38,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(39,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(40,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(41,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(42,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(43,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(44,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(45,16): warning C4996: 'sf::Text::setColor': was declared deprecated
-C:\Projects\Sudoku\src\cell.cpp(55,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Sudoku\src\cell.cpp(55,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Sudoku\src\cell.cpp(63,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Sudoku\src\cell.cpp(63,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   main.cpp
+  sudoku.cpp
   Generating Code...
   Sudoku_Game.vcxproj -> C:\Projects\Sudoku\build\Debug\Sudoku_Game.exe

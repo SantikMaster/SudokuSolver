@@ -320,6 +320,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Projects\Sudoku\src\main.cpp" />
     <ClCompile Include="C:\Projects\Sudoku\src\cell.cpp" />
     <ClInclude Include="C:\Projects\Sudoku\src\cell.h" />
+    <ClCompile Include="C:\Projects\Sudoku\src\sudoku.cpp" />
+    <ClInclude Include="C:\Projects\Sudoku\src\sudoku.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Projects\Sudoku\build\ZERO_CHECK.proj">
