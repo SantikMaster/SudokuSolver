@@ -1,5 +1,0 @@
-﻿cl : command line warning D9002: ignoring unknown option '-std=c++14'
-  main.cpp
-  sudoku.cpp
-  Generating Code...
-  Sudoku_Game.vcxproj -> C:\Projects\Sudoku\build\Debug\Sudoku_Game.exe
