@@ -90,7 +90,6 @@ CellContainer::CellContainer()
 			Cells[i][j].Y =  j * Cell::Size;
 		}
 	}
-
 }
 
 void CellContainer::SetPostion(int x, int y) 

@@ -35,7 +35,6 @@ int main(int argc, char** argv)
 
     Field.Set(field_str);
 
-    
     auto th = std::thread(
         [&Field]()
         {
@@ -62,10 +61,7 @@ int main(int argc, char** argv)
             }
         }
         window.clear(sf::Color::Black);
-
-
         Field.draw(&window);
-
         window.display();
     }
     th.join();

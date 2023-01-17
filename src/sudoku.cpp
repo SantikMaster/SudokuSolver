@@ -28,7 +28,6 @@ SudokuField::SudokuField()
 			Container[i_Cont][j_Cont].Cells[i_Cell][j_Cell].j = Y;
 		}
 	}
-
 }
 void SudokuField::Set(const std::string field[9])
 {
@@ -62,7 +61,6 @@ void SudokuField::draw(sf::RenderWindow* Window)
 			Container[i][j].draw(Window);
 		}
 	}
-
 }
 
 void SudokuField::GetLine(int L, std::string &Line)
@@ -133,7 +131,6 @@ void SudokuField::GetLine(int L, std::set<int>& Line)
 		{
 			Line.insert(Val);
 		}
-		
 	}
 }
 
@@ -155,7 +152,6 @@ void SudokuField::GetColumn(int N, std::set<int>& Col)
 		{
 			Col.insert(Val);
 		}
-
 	}
 }
 
@@ -202,7 +198,6 @@ void SudokuField::GetAvaibleStates(int X, int Y, std::set<int>& Cont)
 			Cont.insert(i);
 		}
 	}
-
 }
 
 //finds first avaible state
@@ -277,7 +272,5 @@ void SudokuField::FillGaps()
 //				std::cout <<" State: " << NewState << '\n';
 			}
 		}
-		
-
 	}
 }
