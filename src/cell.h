@@ -22,12 +22,14 @@ class Cell
 public:
 	static const int Size = 55;
 	int X, Y;
+	int i, j;
 
 	Cell();
 
 	void set(int);
 	int get();
-
+	void SetEntropy(int);
+	int GetEntropy();
 
 	void draw(sf::RenderWindow* Window);
 

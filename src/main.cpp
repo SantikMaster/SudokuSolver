@@ -1,39 +1,22 @@
 #include <iostream>
 
-
+#include <thread>
+#include <chrono>
 #include <SFML/Graphics.hpp>
 
-//#include "Cell.h"
 #include "Sudoku.h"
 
 int main(int argc, char** argv)
 {
     sf::RenderWindow window(sf::VideoMode(640, 500),
-        "Rendering the rectangle.");
+        "Solving the sudoku");
 
      sf::RectangleShape rectangle(sf::Vector2f(128.0f,128.0f));
   	rectangle.setFillColor(sf::Color::Red);
  	rectangle.setPosition(320,240);
   	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 
- //   CellContainer Cell_cont(0,0);
     SudokuField Field;
-
-/*    std::string field_str[9] =
-    {
-        "123456789",
-        "123456789",
-        "123456789",
-
-        "123456789",
-        "123456789",
-        "123456789",
-
-        "123456789",
-        "123456789",
-        "123456789"
-    };*/
-
 
     std::string field_str[9] =
     {
@@ -51,10 +34,21 @@ int main(int argc, char** argv)
     };
 
     Field.Set(field_str);
-    std::string TestLine;
-    Field.GetColumn(3, TestLine);
 
-    std::cout << TestLine;
+    
+    auto th = std::thread(
+        [&Field]()
+        {
+            
+            while (true)
+            {
+                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+                Field.SetEntropy();
+                Field.FillGaps();
+            }
+            
+        }
+    );
 
     while (window.isOpen())
     {
@@ -69,8 +63,10 @@ int main(int argc, char** argv)
         }
         window.clear(sf::Color::Black);
 
+
         Field.draw(&window);
 
         window.display();
     }
+    th.join();
 }

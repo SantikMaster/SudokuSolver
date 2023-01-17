@@ -50,6 +50,17 @@ int Cell::get()
 	if (Number < 0 || Number >9) return -1;
 	return Number;
 }
+
+void Cell::SetEntropy(int val)
+{
+	Entropy = val;
+}
+
+int Cell::GetEntropy()
+{
+	return Entropy;
+}
+
 void Cell::draw(sf::RenderWindow* Window)
 {
 	rectangle->setFillColor(sf::Color::White);
@@ -96,7 +107,6 @@ void CellContainer::SetPostion(int x, int y)
 			Cells[i][j].Y = y + j * Cell::Size;
 		}
 	}
-
 }
 void CellContainer::draw(sf::RenderWindow* Window)
 {
@@ -108,5 +118,4 @@ void CellContainer::draw(sf::RenderWindow* Window)
 			Cells[i][j].draw(Window);
 		}
 	}
-
 }
